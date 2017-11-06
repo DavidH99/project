@@ -1,0 +1,21 @@
+import time
+
+def kaas():
+        timer = 10
+        answer = "Incorrect password."
+        password = 1234
+        while timer > 0:
+            time.sleep(1)
+            timer -= 1
+            print (timer)
+            code = int(input())
+            if code == password:
+                timer = 0
+                answer = "Correct password."
+                return answer
+        return answer
+
+
+print(kaas())
+
+
