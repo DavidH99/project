@@ -1,21 +1,22 @@
-import time
-
-def kaas():
-        timer = 10
-        answer = "Incorrect password."
-        password = 1234
-        while timer > 0:
-            time.sleep(1)
-            timer -= 1
-            print (timer)
-            code = int(input())
-            if code == password:
-                timer = 0
-                answer = "Correct password."
-                return answer
-        return answer
+from tkinter import *
 
 
-print(kaas())
+root = Tk()
+root.title("Super woman captain awesomeness")
+root.configure(background="purple")
 
+
+def click():
+    output.insert(END, "Dit is een hint. \n")
+    Hint1done = Label(root, text="Hint 1").grid(row=0, column = 0)
+
+
+Hint1 = Button(root, text="Hint 1", command = click).grid(row = 0, column = 0)
+
+output = Text(root)
+output.grid(row = 0, column = 1)
+
+
+
+root.mainloop()
 
